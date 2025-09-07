@@ -1,0 +1,5 @@
+tanu-landing/node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node filter=lfs diff=lfs merge=lfs -text
+/node_modules/* filter=lfs diff=lfs merge=lfs -text
+/node/* filter=lfs diff=lfs merge=lfs -text
+5f1b9ebbd6f9164456b0fc3eead7995e6b27ae4f3ee58ba2b0c0c8a95a954af8 filter=lfs diff=lfs merge=lfs -text
+/tanu-landing/node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node/* filter=lfs diff=lfs merge=lfs -text
