@@ -36,12 +36,13 @@ export default function Home() {
     };
   }, []);
 
-  // Dark mode toggle
-  useEffect(() => {
+  // Dark mode toggle root-д шууд class нэмэх
+  const toggleDarkMode = () => {
     const root = window.document.documentElement;
-    if (darkMode) root.classList.add('dark');
+    if (!darkMode) root.classList.add('dark');
     else root.classList.remove('dark');
-  }, [darkMode]);
+    setDarkMode(!darkMode);
+  };
 
   return (
     <div className="font-sans bg-background dark:bg-black text-foreground dark:text-white transition-colors duration-500">
@@ -73,7 +74,7 @@ export default function Home() {
               </li>
               <li className="md:ml-4">
                 <button
-                  onClick={() => setDarkMode(!darkMode)}
+                  onClick={toggleDarkMode}
                   className="px-4 py-2 bg-primary text-black dark:text-white dark:bg-yellow-400 rounded hover:opacity-80 transition"
                 >
                   {darkMode ? "Light Mode" : "Dark Mode"}
@@ -161,7 +162,6 @@ export default function Home() {
         © 2025 Tanu Construction. All rights reserved.
       </footer>
 
-      {/* Tailwind custom float animation */}
       <style jsx>{`
         @keyframes float {
           0% { transform: translateY(0px); }
